@@ -1,9 +1,9 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url:  ${DATABASE_URL}
-    username: ${DATABASE_USERNAME}
-    password: ${DATABASE_PASSWORD}
+    url:  jdbc:mysql://server-mysql-developement.mysql.database.azure.com:3306/mydatabase
+    username: username
+    password: TP_P@ssword1234
   jpa:
     properties:
       hibernate:
