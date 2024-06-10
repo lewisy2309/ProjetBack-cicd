@@ -1,4 +1,4 @@
-name: Build and deploy Project-back-hbrg JAVA application
+name: Build and deploy backend projet tp JAVA application
 
 env:
   JAVA_VERSION: '17'                  
@@ -103,6 +103,6 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'backend-app-developement'
+          app-name: 'backend-app-production'
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE_PRODUCTION }}
           package: '*.jar'
