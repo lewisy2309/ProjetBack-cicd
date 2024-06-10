@@ -26,11 +26,8 @@ jobs:
           distribution: ${{ env.DISTRIBUTION }}
           cache: 'maven'
 
-      - name: Set environment variables for tests
-        run: |
-          echo "DATABASE_URL=jdbc:mysql://localhost:3306/mydatabase" >> $GITHUB_ENV
-          echo "DATABASE_USERNAME=root" >> $GITHUB_ENV
-          echo "DATABASE_PASSWORD=password" >> $GITHUB_ENV
+      - name: Build with Maven, skip tests
+        run: mvn clean install -DskipTests=true
 
       - name: Build with Maven
         run: mvn clean install
